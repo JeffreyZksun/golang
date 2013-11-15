@@ -1,11 +1,10 @@
+// server.go
 package main
 
 import (
-    //"crypto/tls"
 	"net"
 	"net/rpc"
     "log"
-    //"net/http"
 )
 
 type Args struct {
@@ -22,7 +21,6 @@ func (t *Calculator) Add(args *Args, reply *int) error {
 func main(){
     cal := new(Calculator)
     rpc.Register(cal)
-    //rpc.HandleHTTP()
     listener, e := net.Listen("tcp", ":1234")
     if e != nil {
         log.Fatal("listen error:", e)
