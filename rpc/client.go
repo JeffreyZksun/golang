@@ -27,4 +27,3 @@ func main(){
     }
     fmt.Printf("Result: %d+%d=%d", args.X, args.Y, reply)
 }
-
